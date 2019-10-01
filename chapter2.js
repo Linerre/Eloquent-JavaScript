@@ -10,7 +10,7 @@ for (let count = outPut.length; count < 7; count +=1) {
     console.log(outPut)
 }
 
-question 2
+// question 2
 for (let n = 1; n < 101; n += 1) {
     if (n % 3 === 0 && n % 5 ===0) {
         console.log('FuzzBuzz');
