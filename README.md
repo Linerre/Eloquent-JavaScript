@@ -1,7 +1,7 @@
 # Eloquent-JavaScript
-This repository contains my solution code files for the exercises in the book Eloquent JavaScript.
+This repository contains my solution code files for the exercises in the book *[Eloquent JavaScript](https://eloquentjavascript.net/)*.
 
-*[Eloquent JavaScript](https://eloquentjavascript.net/)* is my beginner-guide book on the JavaScript programming language. 
+It is my beginner guide on the JavaScript programming language. 
 I chose it simply because of the recommendation from many people. And as uaual I'm trying to finish as many exercies as I could
 along my reading journey.
 
