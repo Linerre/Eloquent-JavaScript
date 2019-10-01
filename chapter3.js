@@ -1,36 +1,36 @@
-// // question 1
-// function min(a, b) {
-//     let mini = 0;
-//     if (a > b) {
-//         mini = b;
-//     } else {
-//         mini = a;
-//     }
-//     return mini;
-// }
+// question 1
+function min(a, b) {
+    let mini = 0;
+    if (a > b) {
+        mini = b;
+    } else {
+        mini = a;
+    }
+    return mini;
+}
 
-// console.log(min(10, 25))
+console.log(min(10, 25))
 
 // question 2
-// function isEven(n) {
-//     // function cal()
-//     if (n === 0) {
-//         return true;
-//     } else if (n === 1) {
-//         return false;
-//     } else {
-//         // while(n > 1) {
-//             n -= 2;
-//         // }
-//     }
-//     return isEven(n);
+function isEven(n) {
+    // function cal()
+    if (n === 0) {
+        return true;
+    } else if (n === 1) {
+        return false;
+    } else {
+        // while(n > 1) {
+            n -= 2;
+        // }
+    }
+    return isEven(n);
     
-// }
+}
 
-// console.log(isEven(50))
-// console.log(isEven(75))
-// console.log(isEven(1002))
-// console.log(isEven(-1))
+console.log(isEven(50))
+console.log(isEven(75))
+console.log(isEven(1002))
+console.log(isEven(-1))
 
 
 // question 3
