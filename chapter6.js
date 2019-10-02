@@ -34,6 +34,34 @@ console.log(new Vec(3, 4).length);
 // → 5
 
 // qustion2
+let testArray1 = [1, 2, 3, 4],
+    testArray2 = [];
 
+// console.log(testArray2.length)
+
+var addElement = function(element, array) {
+    //if the array is empty
+    if (array.length === 0) {
+        array.push(element); // return array.push(element) would be wrong
+        return array;
+    } else {
+        for (let i of array) {
+            // let index = array.indexOf(i);
+            if (i === element) {
+                return `The ${element} exists already in ${array}.`;
+            } else {
+                // works but need to be improved a bit
+                // since Array will be changed every time
+                return addElement(element, array.slice(1,))
+            }
+        } 
+        return array;
+    }
+    
+};
+
+console.log(addElement(4, testArray1))
+// console.log(addElement(0, testArray1))
+// console.log(addElement(4, testArray2))
 
 
