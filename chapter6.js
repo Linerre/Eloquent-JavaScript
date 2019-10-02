@@ -45,14 +45,17 @@ var addElement = function(element, array) {
         array.push(element); // return array.push(element) would be wrong
         return array;
     } else {
-        for (let i of array) {
-            // let index = array.indexOf(i);
+        let tempo = array.slice(); // copy array
+        for (let i of tempo) {
             if (i === element) {
                 return `The ${element} exists already in ${array}.`;
             } else {
                 // works but need to be improved a bit
                 // since Array will be changed every time
-                return addElement(element, array.slice(1,))
+                return addElement(element, tempo.slice(1,))
+                // won't work either, since you pass modified array 'tempo'
+                // every time to the arg of the function and
+                // ${array} in fact refers to tempo
             }
         } 
         return array;
