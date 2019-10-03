@@ -45,26 +45,43 @@ var addElement = function(element, array) {
         array.push(element); // return array.push(element) would be wrong
         return array;
     } else {
-        let tempo = array.slice(); // copy array
+        let tempo = array.slice(); 
         for (let i of tempo) {
-            if (i === element) {
-                return `The ${element} exists already in ${array}.`;
-            } else {
-                // works but need to be improved a bit
-                // since Array will be changed every time
-                return addElement(element, tempo.slice(1,))
-                // won't work either, since you pass modified array 'tempo'
-                // every time to the arg of the function and
-                // ${array} in fact refers to tempo
+            if (i === element && tempo.length !==1) { // condition1: element appears anywhere before last
+                console.log(array);
+                return `The ${element} exists already in the original array.`;
+            } else if (i === element && tempo.length === 1) { //condition2: element appears last
+                console.log(array);
+                return `The ${element} exists already in the original array.`;
+            } else if (i !== element && tempo.length === 1) {//condition3: element never appears
+                console.log(array);
+                array.push(element);
+                return array;
+            } else {// tail recursive
+                console.log(array);
+                return addElement(element, tempo.slice(1,));
             }
         } 
-        return array;
     }
     
 };
 
+//won't work either since tempo still ponits to array and will affect it!
+//let's try to make an empty array and reload it in every loop!
+
 console.log(addElement(4, testArray1))
-// console.log(addElement(0, testArray1))
-// console.log(addElement(4, testArray2))
-
-
+console.log(addElement(5, testArray1))
+console.log(addElement(0, testArray1))
+console.log(addElement(4, testArray2))
+// The 4 exists already in the original array.
+// [ 1, 2, 3, 4 ]
+// [ 2, 3, 4 ]
+// [ 3, 4 ]
+// [ 4 ]
+// [ 4, 5 ]
+// [ 1, 2, 3, 4 ]
+// [ 2, 3, 4 ]
+// [ 3, 4 ]
+// [ 4 ]
+// [ 4, 0 ]
+// [ 4 ]
