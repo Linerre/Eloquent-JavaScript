@@ -37,8 +37,8 @@ console.log(new Vec(3, 4).length);
 let testArray1 = [1, 2, 3, 4],
     testArray2 = [];
 
-// console.log(testArray2.length)
-
+// ================================================    
+// solution 1: using ====
 function add(element, array) {
     let result = array;
     let addElement = function(element, array) {
@@ -75,19 +75,12 @@ function add(element, array) {
 //so I tried to embed the adding element function into a function-envi 
 //so that the var outside the adding func will remain unchanged
 
-console.log(addElement(4, testArray1))
-console.log(addElement(5, testArray1))
-console.log(addElement(0, testArray1))
-console.log(addElement(4, testArray2))
-// The 4 exists already in the original array.
-// [ 1, 2, 3, 4 ]
-// [ 2, 3, 4 ]
-// [ 3, 4 ]
-// [ 4 ]
-// [ 4, 5 ]
-// [ 1, 2, 3, 4 ]
-// [ 2, 3, 4 ]
-// [ 3, 4 ]
-// [ 4 ]
-// [ 4, 0 ]
-// [ 4 ]
+
+// ================================================    
+// solution 2: using .includes() && .indexOf()
+
+console.log(add(4, testArray1))
+console.log(add(5, testArray1))
+console.log(add(0, testArray1))
+console.log(add(4, testArray2))
+
