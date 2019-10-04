@@ -39,35 +39,41 @@ let testArray1 = [1, 2, 3, 4],
 
 // console.log(testArray2.length)
 
-var addElement = function(element, array) {
-    //if the array is empty
-    if (array.length === 0) {
-        array.push(element); // return array.push(element) would be wrong
-        return array;
-    } else {
-        let tempo = array.slice(); 
-        for (let i of tempo) {
-            if (i === element && tempo.length !==1) { // condition1: element appears anywhere before last
-                console.log(array);
-                return `The ${element} exists already in the original array.`;
-            } else if (i === element && tempo.length === 1) { //condition2: element appears last
-                console.log(array);
-                return `The ${element} exists already in the original array.`;
-            } else if (i !== element && tempo.length === 1) {//condition3: element never appears
-                console.log(array);
-                array.push(element);
-                return array;
-            } else {// tail recursive
-                console.log(array);
-                return addElement(element, tempo.slice(1,));
-            }
-        } 
-    }
-    
-};
+function add(element, array) {
+    let result = array;
+    let addElement = function(element, array) {
+        //if the array is empty
+        if (array.length === 0) {
+            array.push(element); // return array.push(element) would be wrong
+            return array;
+        } else {
+            for (let i of array) {
+                if (i === element && array.length !==1) {//condition1: element appears anywhere but last;
+                    return `The ${element} exists already in the original array.`;
+                } else if (i === element && array.length === 1) {//condition2: element appears last
+                    return `The ${element} exists already in the original array.`;
+                } else if (i !== element && array.length === 1) {//condition3: element never appears
+                    array.push(element)
+                    return array.slice(1,)
+                } else {// tail recursive
+                    return addElement(element, array.slice(1,)); 
+                }
+            } 
+        }  
+    };
 
-//won't work either since tempo still ponits to array and will affect it!
-//let's try to make an empty array and reload it in every loop!
+    if (typeof addElement(element, array) === 'string') {
+        return addElement(element, array);
+    }
+    else {
+        console.log(`${element} has been added successfully!`)
+        return result.concat(addElement(element, array));
+    }
+}
+
+//it's hard to copy an array without affecting the original;
+//so I tried to embed the adding element function into a function-envi 
+//so that the var outside the adding func will remain unchanged
 
 console.log(addElement(4, testArray1))
 console.log(addElement(5, testArray1))
