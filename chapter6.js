@@ -82,5 +82,4 @@ function add(element, array) {
 console.log(add(4, testArray1))
 console.log(add(5, testArray1))
 console.log(add(0, testArray1))
-console.log(add(4, testArray2))
-
+// changed my Git email configuration
