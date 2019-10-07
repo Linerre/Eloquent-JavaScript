@@ -1,13 +1,13 @@
 # Eloquent-JavaScript
-This repository contains my solution code files for the exercises in the book *[Eloquent JavaScript](https://eloquentjavascript.net/)*.
+This repository contains my solution code, chapter by chapter, for the exercises in the book *[Eloquent JavaScript](https://eloquentjavascript.net/)*.
 
 It is my beginner guide on the JavaScript programming language. 
-I chose it simply because of the recommendation from many people. And as uaual I'm trying to finish as many exercies as I could
+I chose it simply because of the recommendation from many people around. And as uaual I'm trying to finish as many exercies as I could
 along my reading journey.
 
 I have some experience coding in Python, and back to the time I was doing so, I just used a text editor and the `python` interpreter (`IPython` for example).
 
-Soon I realized there is a crucial problme with this habit: **It is hard for me to track the changes I made while tesing on different ideas that I came up with.**
+Soon I realized there is a crucial problme with this habit: **It is hard for me to track the changes I made while tesing on different ideas that I came up with.** Wrong ideas are just such a wonderful treasure that equally enlightens me.
 
 What if there is a tool like the Microsoft Word that can track the history of changes. And hooray! Here comes Github!
 
