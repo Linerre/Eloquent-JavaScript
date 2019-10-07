@@ -37,49 +37,22 @@ console.log(new Vec(3, 4).length);
 let testArray1 = [1, 2, 3, 4],
     testArray2 = [];
 
-// ================================================    
-// solution 1: using ====
-function add(element, array) {
-    let result = array;
-    let addElement = function(element, array) {
+// console.log(testArray2.length)
+let addElement = function(element, array) {
         //if the array is empty
-        if (array.length === 0) {
-            array.push(element); // return array.push(element) would be wrong
-            return array;
-        } else {
-            for (let i of array) {
-                if (i === element && array.length !==1) {//condition1: element appears anywhere but last;
-                    return `The ${element} exists already in the original array.`;
-                } else if (i === element && array.length === 1) {//condition2: element appears last
-                    return `The ${element} exists already in the original array.`;
-                } else if (i !== element && array.length === 1) {//condition3: element never appears
-                    array.push(element)
-                    return array.slice(1,)
-                } else {// tail recursive
-                    return addElement(element, array.slice(1,)); 
-                }
-            } 
-        }  
-    };
-
-    if (typeof addElement(element, array) === 'string') {
-        return addElement(element, array);
+    if (array.length === 0) {
+        array.push(element); // return array.push(element) would be wrong
+        return array;
+    } else if (array.includes(element)) {
+        return `The ${element} exists already in the original array.`;
+    } else {
+        array.push(element);
+        return array;
     }
-    else {
-        console.log(`${element} has been added successfully!`)
-        return result.concat(addElement(element, array));
-    }
-}
-
-//it's hard to copy an array without affecting the original;
-//so I tried to embed the adding element function into a function-envi 
-//so that the var outside the adding func will remain unchanged
+};   
 
 
-// ================================================    
-// solution 2: using .includes() && .indexOf()
-
-console.log(add(4, testArray1))
-console.log(add(5, testArray1))
-console.log(add(0, testArray1))
-// changed my Git email configuration
+console.log(addElement(2, testArray1))
+console.log(addElement(5, testArray1))
+// console.log(addElement(0, testArray1))
+// console.log(addElement(4, testArray2))
