@@ -37,22 +37,30 @@ console.log(new Vec(3, 4).length);
 let testArray1 = [1, 2, 3, 4],
     testArray2 = [];
 
-// console.log(testArray2.length)
-let addElement = function(element, array) {
-        //if the array is empty
-    if (array.length === 0) {
-        array.push(element); // return array.push(element) would be wrong
-        return array;
-    } else if (array.includes(element)) {
-        return `The ${element} exists already in the original array.`;
-    } else {
-        array.push(element);
-        return array;
+class Group {
+    constructor() {
+        this.array = [];
     }
-};   
+    
+    add(element) {
+            //if the array is empty
+        if (this.array.length === 0) {
+            this.array.push(element); // return array.push(element) would be wrong
+            return this.array;
+        } else if (this.array.includes(element)) {
+            return `The ${element} exists already in the group`;
+        } else {
+            this.array.push(element);
+            return this.array;
+        }
+    }  
+}
 
 
-console.log(addElement(2, testArray1))
-console.log(addElement(5, testArray1))
-// console.log(addElement(0, testArray1))
-// console.log(addElement(4, testArray2))
+let group = new Group();
+
+group.add(2)
+group.add(5)
+group.add(4)
+console.log(group.add(2))
+console.log(group)
