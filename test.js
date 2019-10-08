@@ -22,13 +22,15 @@ class Group {
     
     delete(element) {
         let index = this.array.indexOf(element);
-        // let span = this.array.length;
+        let span = this.array.length;
         let firstHalf = this.array.slice(0, index),
             secondHalf = this.array.slice(index+1,);
         if (index === -1) {// element not in the array
             return `Can't delete ${element} because the original array does not contain it.`
-        } else {// won't work since if element at the last postion, nothing will change
-            return firstHalf.concat(secondHalf);
+        } else if (index === span - 1) {//if element at the last postion, pop it!
+            return this.array.pop(element);
+        } else {// element in the middle
+            return firstHalf.firstHalf.concat(secondHalf);
         }
     }
 }
