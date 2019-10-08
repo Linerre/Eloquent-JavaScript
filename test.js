@@ -30,7 +30,7 @@ class Group {
         } else if (index === span - 1) {//if element at the last postion, pop it!
             return this.array.pop(element);
         } else {// element in the middle
-            return firstHalf.firstHalf.concat(secondHalf);
+            return firstHalf.concat(secondHalf);
         }
     }
 }
