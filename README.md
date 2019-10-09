@@ -11,4 +11,8 @@ Soon I realized there is a crucial problme with this habit: **It is hard for me 
 
 What if there is a tool like the Microsoft Word that can track the history of changes. And hooray! Here comes Github!
 
+This repo is work in slow progress because I'm a full-time staff member in a
+research library and I have other languages to learn at the same time. But I am
+determined to finish it.  
+
 And this repository is created rightly for that purpose! I hope, in the end, I can see every attemp I made, be it successful or failed, because they are all worthy of being remembered. 
