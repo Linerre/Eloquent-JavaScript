@@ -76,6 +76,8 @@ class Group {
             return false;
         }
     }
+    //static
+    
 }
     
     
