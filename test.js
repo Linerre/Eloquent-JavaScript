@@ -33,6 +33,14 @@ class Group {
             return firstHalf.concat(secondHalf);
         }
     }
+
+    has(element) {
+        if(this.array.includes(element)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
 
 
@@ -50,5 +58,11 @@ console.log(group)
 console.log(group.add(2))
 // The 2 exists already in the group.
 group.delete(10)
+console.log(group.has(5))
+//true
+console.log(group.has(10))
+//false
+
+
 console.log(group)
 // Group { array: [ 2, 5, 4 ] }
