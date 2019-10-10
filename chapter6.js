@@ -35,7 +35,7 @@ console.log(new Vec(3, 4).length);
 
 // qustion2
 let testArray1 = [1, 2, 3, 4],
-    testArray2 = [];
+    testArray2 = [20, 'NYU', 'Jessie'];
 
 class Group {
     constructor() {
@@ -76,7 +76,11 @@ class Group {
             return false;
         }
     }
-    //static
+    // static from(anArray) {
+    //     for (let element of anArray) {
+    //         this.array.push(element);
+    //     }
+    // }
     
 }
     
@@ -86,6 +90,17 @@ let group = new Group();
 group.add(2)
 group.add(5)
 group.add(4)
+
+console.log(groupTwo.has('NYU'))
+//true
+
+console.log(groupTwo)
+console.log(groupTwo.delete('10'))
+//
+console.log(groupTwo.delete(20))
+//
+console.log(groupTwo)
+
 console.log(group.delete(10))
 // Can't delete 10 because the original array does not contain it.
 group.add(10)
