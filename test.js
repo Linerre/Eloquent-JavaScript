@@ -27,8 +27,11 @@ class Group {
             secondHalf = this.array.slice(index+1,);
         if (index === -1) {// element not in the array
             return `Can't delete ${element} because the original array does not contain it.`
-        } else if (index === span - 1) {//if element at the last postion
+        } else if (index === span - 1) {//element at the last postion
             this.array.pop(element);
+            return this.array;
+        } else if (index === 0) {//element at the beginning
+            this.array.shift(element);
             return this.array;
         } else {// element in the middle
             return firstHalf.concat(secondHalf);
@@ -54,17 +57,18 @@ class Group {
 }
 
 
-// // test groupTwo
-// let groupTwo = Group.from(testArray2)
-// console.log(groupTwo.has('NYU'))
-// //true
-// console.log(groupTwo)
-// //Group { array: [ 20, 'NYU', 'Jessie' ] }
-// console.log(groupTwo.delete('10'))
-// // [ 'NYU', 'Jessie' ]
-// groupTwo.delete(20)
-// //
-// console.log(groupTwo)
+// test groupTwo
+let groupTwo = Group.from(testArray2)
+console.log(groupTwo.has('NYU'))
+//true
+console.log(groupTwo)
+//Group { array: [ 20, 'NYU', 'Jessie' ] }
+console.log(groupTwo.delete('10'))
+// Can't delete 10 because the original array does not contain it.
+groupTwo.delete(20)
+//
+console.log(groupTwo)
+// [ 'NYU', 'Jessie' ]
 
 
 // test group
