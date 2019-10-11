@@ -41,11 +41,12 @@ class Group {
             return false;
         }
     }
-    // static from(anArray) {
-    //     for (let element of anArray) {
-    //         this.array.push(element);
-    //     }
-    // }
+
+    static from(anArray) {
+        for (let element of anArray) {
+           return new Group() //?
+        }
+    }
 
 }
 
