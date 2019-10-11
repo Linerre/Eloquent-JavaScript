@@ -59,11 +59,12 @@ class Group {
         let index = this.array.indexOf(element);
         let span = this.array.length;
         let firstHalf = this.array.slice(0, index),
-        secondHalf = this.array.slice(index+1,);
+            secondHalf = this.array.slice(index+1,);
         if (index === -1) {// element not in the array
             return `Can't delete ${element} because the original array does not contain it.`
-        } else if (index === span - 1) {//if element at the last postion, pop it!
-            return this.array.pop(element);
+        } else if (index === span - 1) {//if element at the last postion
+            this.array.pop(element);
+            return this.array;
         } else {// element in the middle
             return firstHalf.concat(secondHalf);
         }
@@ -79,7 +80,7 @@ class Group {
     static from(anArray) {
         let insider = new Group();
         for (let element of anArray) {
-            insider.push(element);
+            insider.add(element);
         }
         return insider;
     }
