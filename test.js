@@ -43,9 +43,11 @@ class Group {
     }
 
     static from(anArray) {
+        let insider = new Group();
         for (let element of anArray) {
-           return new Group() //?
+            insider.add(element);
         }
+        return insider;
     }
 
 }
@@ -62,9 +64,10 @@ console.log(groupTwo.has('NYU'))
 //true
 
 console.log(groupTwo)
+//Group { array: [ 20, 'NYU', 'Jessie' ] }
 console.log(groupTwo.delete('10'))
-//
-console.log(groupTwo.delete(20))
+// [ 'NYU', 'Jessie' ]
+groupTwo.delete(20)
 //
 console.log(groupTwo)
 

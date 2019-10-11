@@ -77,16 +77,19 @@ class Group {
         }
     }
     static from(anArray) {
+        let insider = new Group();
         for (let element of anArray) {
-           return new Group() //?
+            insider.push(element);
         }
+        return insider;
     }
     
 }
     
     
 let group = new Group();
-    
+let groupTwo = Group.from(testArray2)
+
 group.add(2)
 group.add(5)
 group.add(4)
@@ -95,18 +98,21 @@ console.log(groupTwo.has('NYU'))
 //true
 
 console.log(groupTwo)
+//Group { array: [ 20, 'NYU', 'Jessie' ] }
 console.log(groupTwo.delete('10'))
-//
-console.log(groupTwo.delete(20))
+// [ 'NYU', 'Jessie' ]
+groupTwo.delete(20)
 //
 console.log(groupTwo)
+
+
 
 console.log(group.delete(10))
 // Can't delete 10 because the original array does not contain it.
 group.add(10)
 console.log(group)
 // Group { array: [ 2, 5, 4, 10 ] }
-    
+
 console.log(group.add(2))
 // The 2 exists already in the group.
 group.delete(10)
@@ -114,5 +120,7 @@ console.log(group.has(5))
 //true
 console.log(group.has(10))
 //false
+
+
 console.log(group)
 // Group { array: [ 2, 5, 4 ] }
