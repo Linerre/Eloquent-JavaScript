@@ -5,7 +5,8 @@ It is my beginner guide on the JavaScript programming language.
 I chose it simply because of the recommendation from many people around. And as uaual I'm trying to finish as many exercies as I could
 along my reading journey.
 
-*I should explain a bit more about my ideas or plans*
+I often found it quite difficult for me understand Object-Oriented Programming
+(OOP). So I have many commits when getting stuck in this area. 
 
 I have some experience coding in Python, and back to the time I was doing so, I just used a text editor and the `python` interpreter (`IPython` for example).
 
