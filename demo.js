@@ -1,15 +1,7 @@
-// This file is used to test some small chank of code
-// as demo code which will be tranmited to test file later
-class GroupIterator {
-  constructor(group) {
-    this.i = 0
-    this.group = group
-  }
+// This file is used to test some small chank of demo code
+//Let's say, I happen to forget about one property of an object
+// I use this file to test whther or not what I think would be right
 
-  next() {
-    if (this.i == this.group.array.length) {
-      return {done: true};
-    }
-    let value = {postion: this.i;
-                 value: this.group.get(i)};
-}
+// Most of the time this file is EMPTY
+// Sometimes there are a few lines of code here
+// But the code might be ugly and deadly wrong
