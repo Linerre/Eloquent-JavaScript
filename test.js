@@ -54,6 +54,14 @@ class Group {
         return insider;
     }
 
+    get() {
+
+    }
+
+    set() {
+
+    }
+
 }
 
 
