@@ -151,3 +151,23 @@ console.log(group.has(10))
 //false
 console.log(group)
 // Group { array: [ 2, 5, 4 ] }
+
+// Borrowing a Method
+// The solution can be found and has been well explained by
+// MDN doc at here: 
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
+
+
+// This is why I often fear I misunderstand the author.
+// When she said 'borrowing a method', I was thinking of inheritance so far as to create 
+// a new one myself. But the solution is quite simple and self-explainatory
+
+
+let map = {one: true, two: true, hasOwnProperty: true};
+
+
+// Fix this call
+console.log(({}).hasOwnProperty.call(map ,"one")); //method one
+console.log(Object.prototype.hasOwnProperty.call(map ,"one"));  //method two
+
+// → true
