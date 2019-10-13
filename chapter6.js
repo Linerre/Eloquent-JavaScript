@@ -89,7 +89,7 @@ class Group {
         return insider;
     }
 
-    [Symbol.iterator]() {
+    [Symbol.iterator]() {// for question 3
         let index = 0;
         let grouper = this.array;
         return {
