@@ -80,6 +80,7 @@ class Group {
             return false;
         }
     }
+
     static from(anArray) {
         let insider = new Group();
         for (let element of anArray) {
@@ -87,9 +88,31 @@ class Group {
         }
         return insider;
     }
+
+    [Symbol.iterator]() {
+        let index = 0;
+        let grouper = this.array;
+        return {
+            next: () => {
+                if (index < grouper.length) {
+                    let element = grouper[index];
+                    index += 1;
+                    return { value: element, done: false }
+                } else {
+                    return { done: true }
+                }
+            }    
+        }   
+    }
     
 }
-    
+
+for (let value of Group.from(["a", "b", "c"])) {
+    console.log(value);
+  }
+  // → a
+  // → b
+  // → c
     
 // test groupTwo
 let groupTwo = Group.from(testArray2)
