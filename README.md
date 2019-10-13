@@ -1,17 +1,24 @@
 # Eloquent-JavaScript
+## What and Why
 This repository contains my solution code, chapter by chapter, for the exercises in the book *[Eloquent JavaScript](https://eloquentjavascript.net/)*.
 
 It is my beginner guide on the JavaScript programming language. 
 I chose it simply because of the recommendation from many people around. And as uaual I'm trying to finish as many exercies as I could
 along my reading journey.
 
-I often found it quite difficult for me to understand Object-Oriented Programming
-(OOP). So I have many commits when getting stuck in this area. 
+## Branches
+I felt a need to test some ideas relevant to certain exercises from time to time. Whenever I found myself in such a situation, I would create a new branch to that end. 
+
+For example, you may find there are several branches related to **chapter 6**. And each of these branch should have included a chapter-level `README` to explain more about the branch itself. 
+
+**Chapter 6** is about *Object-Oriented Programming*, which I often found quite difficult for me to understand. So I have many commits when getting stuck in this area. 
 
 I have some experience coding in Python, and back to the time I was doing so, I just used a text editor and the `python` interpreter (`IPython` for example).
 
 Soon I realized there is a crucial problme with this habit: **It is hard for me to track the changes I made while tesing on different ideas that I came up with.** Wrong ideas are just such a wonderful treasure that equally enlightens me.
 
+(TO BE UPDATED)
+Accasionally, a branch might be used for Git-learning purposes and there will be no chapter-level README. I'm thinking about deleting such branches to avoid confusion as much as possible but I may forget to sometimes. 
 What if there is a tool like the Microsoft Word that can track the history of changes. And hooray! Here comes Github!
 
 This repo is work in slow progress because I'm a full-time staff member in a
