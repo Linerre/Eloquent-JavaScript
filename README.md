@@ -13,16 +13,22 @@ For example, you may find there are several branches related to **chapter 6**. A
 
 **Chapter 6** is about *Object-Oriented Programming*, which I often found quite difficult for me to understand. So I have many commits when getting stuck in this area. 
 
+Accasionally, a branch might be used for Git-learning purposes and there will be no chapter-level README. I'm thinking about deleting such branches to avoid confusion as much as possible but I may forget to sometimes. 
+
+## My pain led me here
 I have some experience coding in Python, and back to the time I was doing so, I just used a text editor and the `python` interpreter (`IPython` for example).
 
 Soon I realized there is a crucial problme with this habit: **It is hard for me to track the changes I made while tesing on different ideas that I came up with.** Wrong ideas are just such a wonderful treasure that equally enlightens me.
 
-(TO BE UPDATED)
-Accasionally, a branch might be used for Git-learning purposes and there will be no chapter-level README. I'm thinking about deleting such branches to avoid confusion as much as possible but I may forget to sometimes. 
 What if there is a tool like the Microsoft Word that can track the history of changes. And hooray! Here comes Github!
 
+## Why not complete?
 This repo is work in slow progress because I'm a full-time staff member in a
 research library and I have other languages to learn at the same time. But I am
 determined to finish it.  
 
+
 And this repository is created rightly for that purpose! I hope, in the end, I can see every attemp I made, be it successful or failed, because they are all worthy of being remembered. 
+
+
+(TO BE UPDATED)
