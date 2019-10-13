@@ -28,7 +28,7 @@ research library and I have other languages to learn at the same time. But I am
 determined to finish it.  
 
 
-And this repository is created rightly for that purpose! I hope, in the end, I can see every attemp I made, be it successful or failed, because they are all worthy of being remembered. 
+And this repository is created rightly for that purpose! I hope, in the end, I can see every attempt I made, be it successful or failed, because they are all worthy of being remembered. 
 
 
 (TO BE UPDATED)
