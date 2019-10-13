@@ -1,3 +1,10 @@
+// This test.js file is used to test my ideas before I 
+// place the code to a chapter_i file as my final solution
+// Sometimes it is empty
+// Sometimes it contains code that may not work
+// For code that do work, please refer to chapter_i file, 
+// where i points to the corresponding chapter number
+
 // qustion2
 let testArray1 = [1, 2, 3, 4],
     testArray2 = [20, 'NYU', 'Jessie'];
@@ -54,16 +61,29 @@ class Group {
         return insider;
     }
 
-    get() {
-
+    [Symbol.iterator]() {
+        let index = 0;
+        let grouper = this.array;
+        return {
+            next: () => {
+                if (index < grouper.length) {
+                    let element = grouper[index];
+                    index += 1;
+                    return { value: element, done: false }
+                } else {
+                    return { done: true }
+                }
+            }    
+        }   
     }
-
-    set() {
-
-    }
-
 }
 
+for (let value of Group.from(["a", "b", "c"])) {
+    console.log(value);
+  }
+  // → a
+  // → b
+  // → c
 
 // // test groupTwo
 // let groupTwo = Group.from(testArray2)
@@ -77,28 +97,3 @@ class Group {
 // //
 // console.log(groupTwo)
 // // [ 'NYU', 'Jessie' ]
-
-
-// // test group
-// let group = new Group();
-// console.log(group)
-// // Group { array: [] }
-// group.add(2)
-// group.add(5)
-// group.add(4)
-// console.log(group.delete(10))
-// // Can't delete 10 because the original array does not contain it.
-// group.add(10)
-// console.log(group)
-// // Group { array: [ 2, 5, 4, 10 ] }
-// console.log(group.add(2))
-// // The 2 exists already in the group.
-// console.log(group.has(5))
-// //true
-// group.delete(10)
-// console.log(group)
-// // Group { array: [ 2, 5, 4 ] }
-// console.log(group.has(10))
-// //false
-// console.log(group)
-// // Group { array: [ 2, 5, 4 ] }
