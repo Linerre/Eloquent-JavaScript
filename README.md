@@ -15,6 +15,18 @@ For example, you may find there are several branches related to **chapter 6**. A
 
 Accasionally, a branch might be used for Git-learning purposes and there will be no chapter-level README. I'm thinking about deleting such branches to avoid confusion as much as possible but I may forget to sometimes. 
 
+## demo file and project file
+`demo` file is used solely for reviewing purposes. If a big chunk of code
+contains a lot of methods that I am only familiar to some extent and need a
+refresh, I will try out the some basics here. For exmaple, when I forget what
+the `.slplt()` method will do to a string, I will test it here.
+
+In the meanwhile, from **Chapter 7** the example code just becomes more
+complicated and I need to follow the author line by line. Therefore, the best
+way of learning is try to write the code myself and figure out what each line
+does. The `project` file, not always with this word in its name, shows the
+complete code for a program, with comments spread wherever I think necessary.
+
 ## My pain led me here
 I have some experience coding in Python, and back to the time I was doing so, I just used a text editor and the `python` interpreter (`IPython` for example).
 
