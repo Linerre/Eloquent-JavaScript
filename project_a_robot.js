@@ -43,7 +43,7 @@ const roads = [// the village roadpath
           if(p.place != this.place) return p;
           return {place: destination, address: p.address};
         }).filter(p => {p.place != p.address});
-      }
-      return new VillgeState(destination, parcels);
+        return new VillgeState(destination, parcels);
+      } 
     }
   }
