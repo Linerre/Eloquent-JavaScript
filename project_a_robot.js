@@ -103,3 +103,21 @@ const roads = [// the village roadpath
 // → Moved to Town Hall
 // → …
 // → Done in 63 turns
+
+
+
+// robot with memory
+const mailRoute = [
+  "Alice's House", "Cabin", "Alice's House", "Bob's House",
+  "Town Hall", "Daria's House", "Ernie's House",
+  "Grete's House", "Shop", "Grete's House", "Farm",
+  "Marketplace", "Post Office"
+]; // it will follow this route
+
+function routeRobot(state, memory) {// check its memory to get the next path
+  if (memory.length == 0) {
+    memory = mailRoute;
+  }
+  return {direction: memory[0], memory: memory.slice(1)};
+}
+
