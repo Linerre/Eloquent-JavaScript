@@ -30,9 +30,9 @@ const roads = [// the village roadpath
   // console.log(roadGraph)
 
   class VillageState {
-    constructor(place, parcels) {//parcel_example = { place: swh, address: destination }
+    constructor(place, parcels) {//parcel_example = [{ place: swh, address: destination }]
       this.place = place;
-      this.parcels = parcels; 
+      this.parcels = parcels; // parcels are arrays containig objs!
     }
 
     move(destination) {
@@ -60,3 +60,46 @@ const roads = [// the village roadpath
   // → []
   console.log(first.place);
   // → Post Office
+
+  // Simulation
+
+  function runRobot(state, robot, memory) {
+    for (let turn = 0;; turn++) {
+      if (state.parcels.length == 0) {// i.e the parcels get delivered!
+        console.log(`Done in ${turn} turns`);
+        break;
+      }
+      let action = robot(state, memory); // what is this robot()???
+      state = state.move(action.direction);
+      memory = action.memory;
+      console.log(`Moved to ${action.direction}`);
+    }
+  }
+
+  function randomPick(array) {
+    let choice = Math.floor(Math.random() * array.length);
+    return array[choice];
+  }
+  
+  function randomRobot(state) {//the robot above?
+    return {direction: randomPick(roadGraph[state.place])};
+  }
+
+  VillageState.random = function(parcelCount = 5) {
+    let parcels = [];
+    for (let i = 0; i < parcelCount; i++) {
+      let address = randomPick(Object.keys(roadGraph));
+      let place;
+      do {
+        place = randomPick(Object.keys(roadGraph));
+      } while (place == address);
+      parcels.push({place, address});
+    }
+    return new VillageState("Post Office", parcels);
+  };
+
+  runRobot(VillageState.random(), randomRobot);//yes!
+// → Moved to Marketplace
+// → Moved to Town Hall
+// → …
+// → Done in 63 turns
