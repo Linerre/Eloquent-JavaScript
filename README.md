@@ -43,4 +43,11 @@ determined to finish it.
 And this repository is created rightly for that purpose! I hope, in the end, I can see every attempt I made, be it successful or failed, because they are all worthy of being remembered. 
 
 
+## Complaints
+
+### Chapter 8 Errors and Exceptions
+In this chapter the author suddenly started using `.prompt()` method, which, if
+memory serves, has never appeared in previous chapters. This confuses me a lot!
+The book from time to time uses something as if it was out of thin air, making
+me wonder if this is a tutorial for beginners. 
 (TO BE UPDATED)
