@@ -9,15 +9,15 @@ function primitiveMultiply(a, b) {
   }
 }
 
-for (;;) {
+for (;;) { // infinite loop
     try {
         function reliableMultiply(a, b) {
-            return primitiveMultiply(a, b);
+            return primitiveMultiply(a, b); // if an exception
         }
         break;
-    } catch (e) {
+    } catch (e) { // comes here
         if (e instanceof MultiplicatorUnitFailure) {
-            console.log('What\'s wrong?');
+            primitiveMultiply(a, b);
         } else {
             throw e;
         }
@@ -26,6 +26,6 @@ for (;;) {
 
 
 
-// console.log(reliableMultiply(8, 8));
-console.log(primitiveMultiply(8, 8));
+console.log(reliableMultiply(8, 8));
+// console.log(primitiveMultiply(8, 8));
 // → 64
