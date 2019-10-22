@@ -12,7 +12,11 @@ function primitiveMultiply(a, b) {
 function reliableMultiply(a, b) {
 	for (;;) {
 		try {
-			primitiveMultiply(a, b); // but no break! Will loop forever!
+			let result = primitiveMultiply(a, b);
+			if (typeof result === 'number') { // signal when to break
+				return result;
+				break;
+			}
 		} catch (e) {
 			if (e instanceof MultiplicatorUnitFailure) {
 				continue; // > 0.2, go back to loop again
