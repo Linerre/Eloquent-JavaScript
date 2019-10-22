@@ -9,19 +9,18 @@ function primitiveMultiply(a, b) {
   }
 }
 
-for (;;) { // infinite loop
-    try {
-        function reliableMultiply(a, b) {
-            return primitiveMultiply(a, b); // if an exception
-        }
-        break;
-    } catch (e) { // comes here
-        if (e instanceof MultiplicatorUnitFailure) {
-            primitiveMultiply(a, b);
-        } else {
-            throw e;
-        }
-    } 
+function reliableMultiply(a, b) {
+	for (;;) {
+		try {
+			primitiveMultiply(a, b); // but no break! Will loop forever!
+		} catch (e) {
+			if (e instanceof MultiplicatorUnitFailure) {
+				continue; // > 0.2, go back to loop again
+			} else {
+				throw e;
+			}
+		}
+	}
 }
 
 
