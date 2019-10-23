@@ -28,7 +28,14 @@ const box = {
   };
   
   function withBoxUnlocked(body) {
-    // Your code here.
+    
+    try {
+
+    } catch (e) {
+
+    } finally {
+        
+    }
   }
   
   withBoxUnlocked(function() {

@@ -5,21 +5,19 @@
 // Most of the time this file is EMPTY
 // Sometimes there are a few lines of code here
 // But the code might be ugly and deadly wrong
-// const name_gender = [
-//     'Leon-male',
-//     'Vickie-female',
-//     'Ashley-female',
-//     'Edward-male',
-//     'Jessie-female',
-//     'Cathie-female'
-// ] 
-
-// for (let [name, gender] of name_gender.map(person => person.split('-'))) {
-//     console.log([name, gender])
-// }
-
-// console.log(name_gender.map(person => person.split('-')))
 
 
-let obj = [{a: 13, b: 12, c: 11}];
-console.log(obj.length);
+const box = {
+    locked: true,
+    unlock() { this.locked = false; },
+    lock() { this.locked = true;  },
+    _content: [],
+    get content() {
+      if (this.locked) throw new Error("Locked!");
+      return this._content;
+    }
+  };
+
+console.log(box.locked);
+console.log(box.unlock()); //unlocked
+console.log(box.locked); // it is unlocked and therefore not true -- false
