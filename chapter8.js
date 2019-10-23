@@ -32,3 +32,33 @@ function reliableMultiply(a, b) {
 console.log(reliableMultiply(8, 8));
 // console.log(primitiveMultiply(8, 8));
 // → 64
+
+// The Locked Box
+const box = {
+	locked: true,
+	unlock() { this.locked = false; },
+	lock() { this.locked = true;  },
+	_content: [],
+	get content() {
+	  if (this.locked) throw new Error("Locked!");
+	  return this._content;
+	}
+  };
+  
+  function withBoxUnlocked(body) {
+	// Your code here.
+  }
+  
+  withBoxUnlocked(function() {
+	box.content.push("gold piece");
+  });
+  
+  try {
+	withBoxUnlocked(function() {
+	  throw new Error("Pirates on the horizon! Abort!");
+	});
+  } catch (e) {
+	console.log("Error raised: " + e);
+  }
+  console.log(box.locked);
+  // → true
