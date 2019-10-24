@@ -29,11 +29,8 @@ const box = {
   
 function withBoxUnlocked(body) {
     box.unlock(); //unlock it
-    body = () => {undefined}; //define the body var as an function
     try { // execute it in a try block and use finally to make sure the box gets locked in any way
         body();
-    } catch (e) { // not necessary, really
-        console.log(e)
     } finally { //nd use finally to make sure the box gets locked in any way
         box.lock();
     }
@@ -43,13 +40,16 @@ function withBoxUnlocked(body) {
 console.log(box.locked);
 //true
 withBoxUnlocked(function() {
-    box.content.push("gold piece"); // will this work?
+    box.content.push("gold piece"); // will this work? it should i think
 });
+
+box.unlock();
+console.log(box.content);
+// ['gold piece']
+box.lock();
 
 console.log(box.locked);
 //true
-
-// console.log(box.content);
 
   
 try {
