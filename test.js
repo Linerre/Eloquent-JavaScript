@@ -32,7 +32,7 @@ function withBoxUnlocked(body) {
         box.unlock(); //unlock it
         try { // execute it in a try block and use finally to make sure the box gets locked in any way
             body();
-        } finally { //nd use finally to make sure the box gets locked in any way
+        } finally { //and use finally to make sure the box gets locked in any way
             box.lock();
         }
     } else {// else lock it first!
@@ -56,6 +56,11 @@ box.unlock();
 withBoxUnlocked(function() {
     box.content.push('leon')
 });
+// The box seems to be locked?
+// false
+// Let's lock it first!
+// Locked?
+// true
 
 
 withBoxUnlocked(function() {
