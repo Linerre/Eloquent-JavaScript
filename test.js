@@ -28,24 +28,43 @@ const box = {
   };
   
 function withBoxUnlocked(body) {
-    box.unlock(); //unlock it
-    try { // execute it in a try block and use finally to make sure the box gets locked in any way
-        body();
-    } finally { //nd use finally to make sure the box gets locked in any way
+    if (box.locked) {// make sure it is unlocked before I open it
+        box.unlock(); //unlock it
+        try { // execute it in a try block and use finally to make sure the box gets locked in any way
+            body();
+        } finally { //nd use finally to make sure the box gets locked in any way
+            box.lock();
+        }
+    } else {// else lock it first!
+        console.log('The box seems to be locked?');
+        console.log(box.locked);
+        console.log('Let\'s lock it first!');
         box.lock();
+        console.log('Locked?');
+        console.log(box.locked);
+        withBoxUnlocked(body); // then try again;
     }
+    
 }
   
 
 console.log(box.locked);
 //true
+
+box.unlock();
+
+withBoxUnlocked(function() {
+    box.content.push('leon')
+});
+
+
 withBoxUnlocked(function() {
     box.content.push("gold piece"); // will this work? it should i think
 });
 
 box.unlock();
 console.log(box.content);
-// ['gold piece']
+// ['leon', 'gold piece']
 box.lock();
 
 console.log(box.locked);
