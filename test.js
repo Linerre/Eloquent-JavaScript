@@ -27,27 +27,38 @@ const box = {
     }
   };
   
-  function withBoxUnlocked(body) {
-    
-    try {
-
-    } catch (e) {
-
-    } finally {
-        
+function withBoxUnlocked(body) {
+    box.unlock(); //unlock it
+    body = () => {undefined}; //define the body var as an function
+    try { // execute it in a try block and use finally to make sure the box gets locked in any way
+        body();
+    } catch (e) { // not necessary, really
+        console.log(e)
+    } finally { //nd use finally to make sure the box gets locked in any way
+        box.lock();
     }
-  }
+}
   
-  withBoxUnlocked(function() {
-    box.content.push("gold piece");
-  });
+
+console.log(box.locked);
+//true
+withBoxUnlocked(function() {
+    box.content.push("gold piece"); // will this work?
+});
+
+console.log(box.locked);
+//true
+
+// console.log(box.content);
+
   
-  try {
+try {
     withBoxUnlocked(function() {
       throw new Error("Pirates on the horizon! Abort!");
     });
-  } catch (e) {
+} catch (e) {
     console.log("Error raised: " + e);
-  }
-  console.log(box.locked);
+}
+
+console.log(box.locked);
   // → true
