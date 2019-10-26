@@ -17,7 +17,7 @@ Accasionally, a branch might be used for Git-learning purposes and there will be
 
 ## demo file and project file
 `demo` file is used solely for reviewing purposes. If a big chunk of code
-contains a lot of methods that I am only familiar to some extent and need a
+contains a lot of methods that I am only familiar with  to some extent and need a
 refresh, I will try out the some basics here. For exmaple, when I forget what
 the `.slplt()` method will do to a string, I will test it here.
 
