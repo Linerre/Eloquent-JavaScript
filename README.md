@@ -3,7 +3,7 @@
 This repository contains my solution code, chapter by chapter, for the exercises in the book *[Eloquent JavaScript](https://eloquentjavascript.net/)*.
 
 It is my beginner guide on the JavaScript programming language. 
-I chose it simply because of the recommendation from many people around. And as uaual I'm trying to finish as many exercies as I could
+I chose it simply because of the recPractical Vimommendation from many people around. And as uaual I'm trying to finish as many exercies as I could
 along my reading journey.
 
 ## Branches
@@ -50,4 +50,12 @@ In this chapter the author suddenly started using `.prompt()` method, which, if
 memory serves, has never appeared in previous chapters. This confuses me a lot!
 The book from time to time uses something as if it was out of thin air, making
 me wonder if this is a tutorial for beginners. 
+### Chapter 9 Regular Expressions
+It is hard for me to understand this:
+```javascript
+section = result[match[1]] = {}
+```
+Why on earth there are two `=` signs in an assignment expression? I have no idea
+if the author once mentioned this before ...
+
 (TO BE UPDATED)
