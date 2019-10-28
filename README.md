@@ -7,6 +7,7 @@ I chose it simply because of the recPractical Vimommendation from many people ar
 along my reading journey.
 
 ## Branches
+### Chapter level branches
 I felt a need to test some ideas relevant to certain exercises from time to time. Whenever I found myself in such a situation, I would create a new branch to that end. 
 
 For example, you may find there are several branches related to **chapter 6**. And each of these branch should have included a chapter-level `README` to explain more about the branch itself. 
@@ -14,6 +15,10 @@ For example, you may find there are several branches related to **chapter 6**. A
 **Chapter 6** is about *Object-Oriented Programming*, which I often found quite difficult for me to understand. So I have many commits when getting stuck in this area. 
 
 Accasionally, a branch might be used for Git-learning purposes and there will be no chapter-level README. I'm thinking about deleting such branches to avoid confusion as much as possible but I may forget to sometimes. 
+### THe `dev` branch
+This is the working branch indeed, though I created it quite a bit late in this
+course. Anyway I have decided to work on it most of the time and create pull
+request once I think it is time to merge it into the **master** branch.
 
 ## demo file and project file
 `demo` file is used solely for reviewing purposes. If a big chunk of code
