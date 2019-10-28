@@ -44,7 +44,10 @@ And this repository is created rightly for that purpose! I hope, in the end, I c
 
 
 ## Complaints
-
+### Few Comments
+The author tends to explain her code, not by using `javascript` comments,
+through text right under a piece of code. This works most of the time, yet will
+be more helpful if line comments is added to it. 
 ### Chapter 8 Errors and Exceptions
 In this chapter the author suddenly started using `.prompt()` method, which, if
 memory serves, has never appeared in previous chapters. This confuses me a lot!
