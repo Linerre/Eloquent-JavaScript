@@ -19,11 +19,11 @@
 function parseINI(string) {
     // Start with an object to hold the top-level fields
     let result = {};
-    let section = result;
+    let section = result;// if section = {}, it's hard to add properties into result
     string.split(/\r?\n/).forEach(line => {
       let match;
       if (match = line.match(/^(\w+)=(.*)$/)) {
-        section[match[1]] = match[2];
+        section[match[1]] = match[2];// match[1] = group 1; and so on
       } else if (match = line.match(/^\[(.*)\]$/)) {
         section = result[match[1]] = {};
       } else if (!/^\s*(;.*)?$/.test(line)) {
