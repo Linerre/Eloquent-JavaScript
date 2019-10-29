@@ -16,3 +16,7 @@ console.log(text.replace(/'\w+'\w+\s[\w\s,.!?]+'/g, "$&"));
 // when the match is 'I'm the cook,', how can you use a string as a whole
 // to replace the original one? the target should be the very single quotes!
 // so you are likely to think in the other way around.
+
+//however, using a function as the 2nd arg of .replace method
+//could solve the problem, though it is NOT smart
+console.log(text.replace(/'\w+'\w+\s[\w\s,.!?]+'/g, str => {return '"' + str.slice(1, -1) + '"'; }))
