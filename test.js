@@ -8,7 +8,7 @@
 //Quoting style
 let text = "'I'm the cook,' he said, 'it's my job.'";
 // Change this call.
-console.log(text.replace(/'\w+'\w+\s[\w\s,.!?]+'/g, "$&"));
+// console.log(text.replace(/'\w+'\w+\s[\w\s,.!?]+'/g, "$&"));
 // → "I'm the cook," he said, "it's my job." 
 
 // this way will not work since it is quite the opposite of the right one
@@ -20,3 +20,4 @@ console.log(text.replace(/'\w+'\w+\s[\w\s,.!?]+'/g, "$&"));
 //however, using a function as the 2nd arg of .replace method
 //could solve the problem, though it is NOT smart
 console.log(text.replace(/'\w+'\w+\s[\w\s,.!?]+'/g, str => {return '"' + str.slice(1, -1) + '"'; }))
+// "I'm the cook," he said, "it's my job."
