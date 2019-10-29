@@ -18,9 +18,9 @@ let strlist =[
 ];
 
 let reglist = [
-    regex1 = /ca[rt]\w?/g,
-    regex2 = /pr?op/g,
-    regex3 = /ferr[a-z]+/g,
+    regex1 = /ca[rt]\w?/,
+    regex2 = /pr?op/,
+    regex3 = /ferr(et|y|ari)/,
     regex4 = /[a-z]+ious/g,
     regex5 = /\s\W/g, // there is a problem with this
     regex6 = /\b\w{6,}\b/g,
