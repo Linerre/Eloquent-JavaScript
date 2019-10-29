@@ -18,21 +18,11 @@ let strlist =[
 ];
 
 let reglist = [
-    regex1 = /ca[rt]\w?/g,
-    regex2 = /pr?op/g,
-    regex3 = /ferr[a-z]+/g,
+    regex1 = /ca[rt]\w?/,
+    regex2 = /pr?op/,
+    regex3 = /ferr(et|y|ari)/,
     regex4 = /[a-z]+ious/g,
     regex5 = /\s\W/g, // there is a problem with this
     regex6 = /\b\w{6,}\b/g,
     regex7 = /[^eE\W]+/g // need to correct
 ];
-
-
-// console.log(strlist[0].match(reglist[0]));
-// console.log(strlist[1].match(reglist[1]));
-// console.log(strlist[2].match(reglist[2]));
-// console.log(strlist[3].match(reglist[3]));
-// console.log(strlist[4].match(reglist[4]));
-// console.log(strlist[5].match(reglist[5]));
-// console.log(strlist[6].match(reglist[6]));
-
