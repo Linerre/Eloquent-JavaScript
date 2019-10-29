@@ -5,59 +5,40 @@
 // For code that do work, please refer to chapter_i file, 
 // where i points to the corresponding chapter number
 
+verify(regex1,
+    ["my car", "bad cats"],// will not catch 'cats'
+    ["camper", "high art"]);
 
-// this will work
-let reg1 = /ca[rt]\w?/; 
-const tests = ['my car', 'bad cats', 'his cat', 'your cars'];
+verify(regex2,
+    ["pop culture", "mad props"],
+    ["plop", "prrrop"]);
 
-for (let str of tests) {
-    console.log(reg1.test(str));
-    // console.log(str.match(reg));
+verify(regex3,
+    ["ferret", "ferry", "ferrari"],
+    ["ferrum", "transfer A"]);
+
+verify(/.../,
+    ["how delicious", "spacious room"],
+    ["ruinous", "consciousness"]);
+
+verify(/.../,
+    ["bad punctuation ."],
+    ["escape the period"]);
+
+verify(/.../,
+    ["hottentottententen"],
+    ["no", "hotten totten tenten"]);
+
+verify(/.../,
+    ["red platypus", "wobbling nest"],
+    ["earth bed", "learning ape", "BEET"]);
+
+function verify(regexp, yes, no) {
+    if (regexp.source == "...") return; // Ignore unfinished exercises
+    for (let str of yes) if (!regexp.test(str)) {
+        console.log(`Failure to match '${str}'`);
+    }
+    for (let str of no) if (regexp.test(str)) {
+        console.log(`Unexpected match for '${str}'`);
+    }
 }
-
-// true
-// true
-// true
-// true
-
-// this will work too!
-let reg2 = /ca[rt]\w?/g; // note the 'g' option here
-for (let str of tests) {
-    console.log(reg2.test(str));
-    console.log(str.match(reg2));
-}
-// true
-// true
-// true
-// true
-// true
-// [ 'car' ]
-// true
-// [ 'cats' ]
-// true
-// [ 'cat' ]
-// true
-// [ 'cars' ]
-
-// HOWEVER, this will NOT work:
-let reg3 = /ca[rt]\w?/g; // note the 'g' option here
-for (let str of tests) {
-    console.log(reg3.test(str));
-    // console.log(str.match(reg2));
-}
-// true
-// true
-// true
-// true
-// true
-// [ 'car' ]
-// true
-// [ 'cats' ]
-// true
-// [ 'cat' ]
-// true
-// [ 'cars' ]
-// true
-// false   <---- why?
-// true
-// false   <---- why?
