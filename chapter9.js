@@ -1,10 +1,10 @@
 // Fill in the regular expressions
 
-verify(/.../,
+verify(/ca[rt]\w?/,
     ["my car", "bad cats"],
     ["camper", "high art"]);
 
-verify(/.../,
+verify(/pr?op/g,
     ["pop culture", "mad props"],
     ["plop", "prrrop"]);
 
