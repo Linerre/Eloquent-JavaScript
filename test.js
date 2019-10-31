@@ -23,4 +23,4 @@ let text = "'I'm the cook,' he said, 'it's my job.'";
 // "I'm the cook," he said, "it's my job."
 
 // method two
-console.log(text.replace(/(\W)'|'(\W)|^'(\w)/g, "$1\"$2\"$3"))
+console.log(text.replace(/(\W)'/g, "$1\""))
