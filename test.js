@@ -19,5 +19,8 @@ let text = "'I'm the cook,' he said, 'it's my job.'";
 
 //however, using a function as the 2nd arg of .replace method
 //could solve the problem, though it is NOT smart
-console.log(text.replace(/'\w+'\w+\s[\w\s,.!?]+'/g, str => {return '"' + str.slice(1, -1) + '"'; }))
+// console.log(text.replace(/'\w+'\w+\s[\w\s,.!?]+'/g, str => {return '"' + str.slice(1, -1) + '"'; }))
 // "I'm the cook," he said, "it's my job."
+
+// method two
+console.log(text.replace(/(\W)'|'(\W)|^'(\w)/g, "$1\"$2\"$3"))
