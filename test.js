@@ -7,7 +7,7 @@
 
 // Numbers again
 // Fill in this regular expression.
-let number = /^...$/;
+let number = /^([-+]?\d+)$|^([+-]?\.\d+)$|^([-+]?\d+\.((\de)?\d+)?)$|^(\d(e|E)[-+]\d+)$/;
 
 // Tests:
 for (let str of ["1", "-1", "+15", "1.55", ".5", "5.",
@@ -23,3 +23,5 @@ for (let str of ["1a", "+-1", "1.2.3", "1+1", "1e4.5",
         console.log(`Incorrectly accepted '${str}'`);
     }
 }
+
+// think if the regex can be shortened a bit ...
