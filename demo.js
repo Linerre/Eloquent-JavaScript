@@ -7,11 +7,18 @@
 // But the code might be ugly and deadly wrong
 
 
-let str = '"I love cats"';
-console.log(str[0]);
+// see the difference between the below two:
 
-function doubleToSingle(str) {
-    return '"' + str.slice(1, -1) + '"';
-}
+let test = function() {
+    return 'Jessie creates this function';
+}();
 
-console.log(doubleToSingle(str));
+console.log(test);
+// Jessie creates this function
+
+let anotherTest = function() {
+    return 'Jessie creates this function too'
+};
+
+console.log(anotherTest);
+// [Function: anotherTest]
