@@ -70,4 +70,33 @@ if the author once mentioned this before ...
 
 **NOTE**: It just means sth like `a = b = 50`, in which `a` and `b` are both assigned with the same value 50. 
 
+### Chapter 10 Modules
+In the **CommonJS** section, it's hard for me understand what the following code does:
+```javascript
+const ordinal = require("ordinal");
+const {days, months} = require("date-names");
+
+exports.formatDate = function(date, format) {
+  return format.replace(/YYYY|M(MMM)?|Do?|dddd/g, tag => {
+    if (tag == "YYYY") return date.getFullYear();
+    if (tag == "M") return date.getMonth();
+    if (tag == "MMMM") return months[date.getMonth()];
+    if (tag == "D") return date.getDate();
+    if (tag == "Do") return ordinal(date.getDate());
+    if (tag == "dddd") return days[date.getDay()];
+  });
+};
+```
+Though the author explains what `require` is, what `exports` is. It just does not make any sense to me. And below code only makes me even more confused:
+```javscript
+const {formatDate} = require("./format-date");
+
+console.log(formatDate(new Date(2017, 9, 13),
+                       "dddd the Do"));
+// → Friday the 13th
+```
+The `"./format-date` looks very like a relative path but *why*?
+I read other articles, say [this one](https://blog.risingstack.com/node-js-at-scale-module-system-commonjs-require/) to know that `require` works very like `import`, and you need to put `exports.<*function name*> = <*function body*>` in your module file, or you define a function first and put `module.exports = <*function name*>` below that body. 
+
+Clearly the example code *requires* two other functions (packages) from NPM.  
 (TO BE UPDATED)
