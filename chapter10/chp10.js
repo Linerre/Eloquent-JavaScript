@@ -15,7 +15,7 @@ const test = require ("./road");
 console.log(test);
 
 
-
+// method two would be the one using keyword 'import', which is pretty straightforward
 
 
   // Circular dependencies
