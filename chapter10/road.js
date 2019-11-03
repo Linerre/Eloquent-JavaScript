@@ -1,4 +1,6 @@
 // road module
+// it contains the array of roads and exports the graph data structure representing them as roadGraph. 
+// It should depend on a module ./graph
 const roadGraphModule = require ("./graph.js");
 const roads = [
     "Alice's House-Bob's House",   "Alice's House-Cabin",
