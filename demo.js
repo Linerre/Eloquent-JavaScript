@@ -22,3 +22,5 @@ let anotherTest = function() {
 
 console.log(anotherTest);
 // [Function: anotherTest]
+
+setTimeout(() => console.log("Tick"), 500);
