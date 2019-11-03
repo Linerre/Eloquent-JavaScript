@@ -96,7 +96,9 @@ console.log(formatDate(new Date(2017, 9, 13),
 // → Friday the 13th
 ```
 The `"./format-date` looks very like a relative path but *why*?
-I read other articles, say [this one](https://blog.risingstack.com/node-js-at-scale-module-system-commonjs-require/) to know that `require` works very like `import`, and you need to put `exports.<function name> = <function body>` in your module file, or you define a function first and put `module.exports = <*function name*>` below that body. 
+I read other articles, say [this one](https://blog.risingstack.com/node-js-at-scale-module-system-commonjs-require/) to know that `require` works very like `import`, and you need to put `exports.<function name> = <function body>` in your module file, or you define a function first and put `module.exports = <function name>` below that body. 
 
-Clearly the example code *requires* two other functions (packages) from NPM.  
+Clearly the example code *requires* two other functions (packages) from NPM. 
+I wish she could have used a simpler example than the one in the chapter, since the main purpose here is to demonstrate the infrastructure of modules.
+ 
 (TO BE UPDATED)
