@@ -95,10 +95,23 @@ console.log(formatDate(new Date(2017, 9, 13),
                        "dddd the Do"));
 // → Friday the 13th
 ```
-The `"./format-date` looks very like a relative path but *why*?
-I read other articles, say [this one](https://blog.risingstack.com/node-js-at-scale-module-system-commonjs-require/) to know that `require` works very like `import`, and you need to put `exports.<function name> = <function body>` in your module file, or you define a function first and put `module.exports = <function name>` below that body. 
-
 Clearly the example code *requires* two other functions (packages) from NPM. 
-I wish she could have used a simpler example than the one in the chapter, since the main purpose here is to demonstrate the infrastructure of modules.
- 
+I wish she could have used a simpler example than the one in the chapter, since the main purpose here is to demonstrate the infrastructure of modules. 
+
+The `"./format-date` looks very like a relative path but *why*? I read other articles, say [this one](https://blog.risingstack.com/node-js-at-scale-module-system-commonjs-require/) to know that `require` works very like `import`, and you need to put `exports.<function name> = <function body>` in your module file, or you define a function first and put `module.exports = <function name>` below that body. 
+
+The last setence in the above paragraph was explained, using text alone of course, by the author in this way:
+>The interface of the `ordinal` package we saw before is not an object but a function. A quirk of the CommonJS modules is that, though the module system will create an empty interface object for you (bound to `exports`), you can replace that with any value by overwriting `module.exports`. This is done by many modules to export a single value instead of an interface object.
+
+But it basically means the below code:
+```javascript
+// add.js module
+function add (a, b) {
+  return a + b
+}
+
+module.exports = add // this line does what the author calls 'overwriting'
+```
+Can you understand why I would like to compalin?
+
 (TO BE UPDATED)
