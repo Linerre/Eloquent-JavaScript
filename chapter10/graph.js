@@ -1,5 +1,7 @@
 // graph module
 // method one
+//graph, which exports a function buildGraph that is used to build the graph. 
+// This function expects an array of two-element arrays (the start and end points of the roads).
 
 exports.buildGraph = function (edges) {
     let graph = Object.create(null);
