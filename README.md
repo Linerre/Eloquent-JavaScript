@@ -88,7 +88,7 @@ exports.formatDate = function(date, format) {
 };
 ```
 Though the author explains what `require` is, what `exports` is. It just does not make any sense to me. And below code only makes me even more confused:
-```javscript
+```javascript
 const {formatDate} = require("./format-date");
 
 console.log(formatDate(new Date(2017, 9, 13),
@@ -113,5 +113,18 @@ function add (a, b) {
 module.exports = add // this line does what the author calls 'overwriting'
 ```
 Can you understand why I would like to compalin?
+
+### Chapter 11 Asynchronous
+In this chapter the author again begins to using long, broken sentences with impenetrable code examples to explain what it is:
+```javascript
+function storage(nest, name) {
+  return new Promise(resolve => {
+    nest.readStorage(name, result => resolve(result));
+  });
+}
+
+storage(bigOak, "enemies")
+  .then(value => console.log("Got", value));
+```
 
 (TO BE UPDATED)
