@@ -23,4 +23,11 @@ let anotherTest = function() {
 console.log(anotherTest);
 // [Function: anotherTest]
 
-setTimeout(() => console.log("Tick"), 500);
+// setTimeout(() => console.log("Tick"), 5000);
+console.log('Hello');
+
+let message = 'Will Jessie like me?'
+for (let i = 0; i < message.length; i += 1 ) {
+    setTimeout(() => console.log(message[i]), 5000);
+}
+// not working like typewriter. Figure this out!
