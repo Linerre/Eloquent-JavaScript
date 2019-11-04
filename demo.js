@@ -28,6 +28,8 @@ console.log('Hello');
 
 let message = 'Will Jessie like me?'
 for (let i = 0; i < message.length; i += 1 ) {
-    setTimeout(() => console.log(message[i]), 5000);
+    setTimeout(function() {
+        console.log(message[i]);
+    }, i * 100);
 }
 // not working like typewriter. Figure this out!
