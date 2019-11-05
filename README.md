@@ -15,7 +15,7 @@ For example, you may find there are several branches related to **chapter 6**. A
 **Chapter 6** is about *Object-Oriented Programming*, which I often found quite difficult for me to understand. So I have many commits when getting stuck in this area. 
 
 Accasionally, a branch might be used for Git-learning purposes and there will be no chapter-level README. I'm thinking about deleting such branches to avoid confusion as much as possible but I may forget to sometimes. 
-### THe `dev` branch
+### The `dev` branch
 This is the working branch indeed, though I created it quite a bit late in this
 course. Anyway I have decided to work on it most of the time and create pull
 requests once I think it is time to merge it into the `master` branch.
