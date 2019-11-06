@@ -126,5 +126,5 @@ function storage(nest, name) {
 storage(bigOak, "enemies")
   .then(value => console.log("Got", value));
 ```
-
+I have decided to switch to other resources, say MDN, and use this book only as auxilary. 
 (TO BE UPDATED)
