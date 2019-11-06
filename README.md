@@ -126,5 +126,5 @@ function storage(nest, name) {
 storage(bigOak, "enemies")
   .then(value => console.log("Got", value));
 ```
-I have decided to switch to other resources, say MDN, and use this book only as auxilary. 
+I have decided to switch to other resources, say MDN, and use this book only as auxilary ref and come back to it to review some concepts and do the exercises. I will keep doing and updating exes though. 
 (TO BE UPDATED)
