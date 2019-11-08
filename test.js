@@ -5,9 +5,4 @@
 // For code that do work, please refer to chapter_i file, 
 // where i points to the corresponding chapter number
 
-// Roads module
-// Add dependencies and exports
 
-// graph module
-const test = require ("./chapter10/road");
-console.log(test);
