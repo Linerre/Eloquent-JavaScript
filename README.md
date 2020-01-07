@@ -3,7 +3,7 @@
 This repository contains my solution code, chapter by chapter, for the exercises in the book *[Eloquent JavaScript](https://eloquentjavascript.net/)*.
 
 It is my beginner guide on the JavaScript programming language.
-I chose it simply because of the recommendation from many people around. And as uaual I'm trying to finish as many exercies as I could
+I chose it simply because of the recommendation from many people around. And as usual I'm trying to finish as many exercise as I could
 along my reading journey.
 
 ## Branches
@@ -14,7 +14,7 @@ For example, you may find there are several branches related to **chapter 6**. A
 
 **Chapter 6** is about *Object-Oriented Programming*, which I often found quite difficult for me to understand. So I have many commits when getting stuck in this area.
 
-Accasionally, a branch might be used for Git-learning purposes and there will be no chapter-level README. I'm thinking about deleting such branches to avoid confusion as much as possible but I may forget to sometimes.
+Occasionally, a branch might be used for Git-learning purposes and there will be no chapter-level README. I'm thinking about deleting such branches to avoid confusion as much as possible but I may forget to sometimes.
 ### The `dev` branch
 This is the working branch indeed, though I created it quite a bit late in this
 course. Anyway I have decided to work on it most of the time and create pull
@@ -23,12 +23,12 @@ requests once I think it is time to merge it into the `master` branch.
 ## demo file and project files
 `demo` file is used solely for reviewing purposes. If a big chunk of code
 contains a lot of methods that I am familiar with *only to some extent* and need a
-refresher on them, I will try out some basics here. For exmaple, when I forget what
+refresher on them, I will try out some basics here. For example, when I forget what
 the `.slplt()` method will do to a string, I will test it here.
 
 In the meanwhile, from **Chapter 7** the example code just becomes more
 complicated and I need to follow the author's example code line by line. Therefore, the best way of learning is try to write the code myself and figure out what each line
-does. The `projects` file contains separate files that show the complete code for an exmaple program, with comments spread among lines wherever I think necessary.
+does. The `projects` file contains separate files that show the complete code for an example program, with comments spread among lines wherever I think necessary.
 
 Sometimes in a specific chapter folder there are two types of files:
 1. the file with its name as `chapi.js` (`i` is the chapter number). A file of such type is basically the solution code in response to the chapter's exercises.
@@ -37,7 +37,7 @@ Sometimes in a specific chapter folder there are two types of files:
 ## My pain led me here
 I have some experience coding in Python, and back to the time I was doing so, I just used a text editor and the `python` interpreter (`IPython` for example).
 
-Soon I realized there is a crucial problme with this habit: **It is hard for me to track the changes I made while tesing on different ideas that I came up with.** Wrong ideas are just such a wonderful treasure that equally enlightens me.
+Soon I realized there is a crucial problem with this habit: **It is hard for me to track the changes I made while testing on different ideas that I came up with.** Wrong ideas are just such a wonderful treasure that equally enlightens me.
 
 What if there is a tool like the Microsoft Word that can track the history of changes. And hooray! Here comes Github!
 
@@ -100,7 +100,7 @@ I wish she could have used a simpler example than the one in the chapter, since 
 
 The `"./format-date` looks very like a relative path but *why*? I read other articles, say [this one](https://blog.risingstack.com/node-js-at-scale-module-system-commonjs-require/) to know that `require` works very like `import`, and you need to put `exports.<function name> = <function body>` in your module file, or you define a function first and put `module.exports = <function name>` below that body.
 
-The last setence in the above paragraph was explained, using text alone of course, by the author in this way:
+The last sentence in the above paragraph was explained, using text alone of course, by the author in this way:
 >The interface of the `ordinal` package we saw before is not an object but a function. A quirk of the CommonJS modules is that, though the module system will create an empty interface object for you (bound to `exports`), you can replace that with any value by overwriting `module.exports`. This is done by many modules to export a single value instead of an interface object.
 
 But it basically means the below code:
