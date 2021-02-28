@@ -20,7 +20,7 @@ This is the working branch indeed, though I created it quite a bit late in this
 course. Anyway I have decided to work on it most of the time and create pull
 requests once I think it is time to merge it into the `master` branch.
 
-## demo file and project files
+## demo.js and project files
 `demo` file is used solely for reviewing purposes. If a big chunk of code
 contains a lot of methods that I am familiar with *only to some extent* and need a
 refresher on them, I will try out some basics here. For example, when I forget what
