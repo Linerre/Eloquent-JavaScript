@@ -3,7 +3,7 @@
 This repository contains my solution code, chapter by chapter, for the exercises in the book *[Eloquent JavaScript](https://eloquentjavascript.net/)*.
 
 It is my beginner guide on the JavaScript programming language.
-I chose it simply because of the recommendations from many people around. And as usual I'm trying to finish as many exercise as I could
+I chose it simply because of the recommendations from many people around. As usual, I'm trying to finish as many exercise as I could
 along my reading journey.
 
 ## Branches
