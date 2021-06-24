@@ -1,5 +1,5 @@
 # Eloquent-JavaScript
-## What and Why
+## What
 This repository contains my solution code, chapter by chapter, for the exercises in the book *[Eloquent JavaScript](https://eloquentjavascript.net/)*.
 
 It is my beginner guide on the JavaScript programming language.
